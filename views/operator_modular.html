@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>操作符模块</title>
+    <link rel="stylesheet" href="../public/css/operate.css">
+</head>
+
+<body>
+    <div class="tishi"></div>
+    <!-- fixed_popup -->
+    <div class="out_mask">
+        <!-- popup2 -->
+        <div class="fixed_popup2" id="popup2">
+            <div class="closex2">
+            </div>
+            <div class="title_pop2">
+                操作符模块
+            </div>
+            <div class="info_list">
+                <div class="infoi">
+                    <div class="infoi_left">类型:</div>
+                    <div class="infoi_right">
+                        <input type="text" class="lxinput typeVal operationType" placeholder="请输入类型">
+                    </div>
+                </div>
+                <div class="infoi">
+                    <div class="infoi_left">名称:</div>
+                    <div class="infoi_right">
+                        <input type="text" class="mcinput typeName" placeholder="请输入名称">
+                    </div>
+                </div>
+                <div class="ovpart">
+                    <div class="po01 po011">操作符列表:</div>
+                    <div class="po01 po012" id="rightadd">
+                        <div class="addlist">
+                            <input type="text" class="adi1 block" placeholder="中文">
+                            <input type="text" class="adi2 block" placeholder="英文">
+                            <span class="jxtj block ys">继续添加</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="statusout">
+                    <div class="infoi_left">状态:</div>
+                    <div class="infoi_right">
+                        <input type="radio" name="status" value="1" class="inputradio radio1" />启用
+                        <input type="radio" name="status" value="0" class="inputradio radio2" />禁用
+                    </div>
+                </div>
+                <div class="btn_p_2">
+                    <div class="btn_qd">确定</div>
+                    <div class="btn_qx gbl">取消</div>
+                </div>
+            </div>
+        </div>
+        <!-- popup2 -->
+        <!-- popup1 -->
+        <div class="fixed_popup" id="popup1">
+            <div class="closex">
+            </div>
+            <div class="top_title">操作符信息</div>
+            <div class="form_info">
+                <div class="info">
+                    <div class="info_left">类型:</div>
+                    <div class="info_right">
+                        <input type="text" name="" class="onelx" value="" />
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info_left">名称:</div>
+                    <div class="info_right">
+                        <input type="text" name="" class="onemc" value="" />
+                    </div>
+                </div>
+                <div class="info3">
+                    <div class="info_left3">操作符列表:</div>
+                    <div class="info_right3">
+                        <div class="cr" id="cridbf">
+                            <div class="addlist ybl">
+                                <input type="text" class="adi1 block yblitem" placeholder="中文">
+                                <input type="text" class="adi2 block yblitem" placeholder="英文">
+                                <span class="jxtj block ys2">继续添加</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info_left">状态:</div>
+                    <div class="info_right info_right3" id="degck">
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_btn2">
+                <div class="btn_qd">确定</div>
+                <div class="btn_qx gbl2">取消</div>
+            </div>
+        </div>
+        <!-- popup1 -->
+    </div>
+    <!-- fixed_popup -->
+    <div class="windowmain">
+        <!-- 头 -->
+        <header>
+            <div class="toppart">
+                <div class="top_inner w1200">
+                    <div class="top_left">
+                        <img src="../public/images/logo.png" alt="">
+                        <span class="sptitle" title="gx">观星数据平台</span>
+                        <a href="" class="fenqun">分群</a>
+                    </div>
+                    <div class="toprightpart po">
+                        <span class="usericon"></span>
+                        <span class="username">厉成韬</span>
+                        <a href="" class="sx" title=""></a>
+                        <a href="" class="tc" title=""></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- 头 -->
+        <!-- main -->
+        <div class="content-main w1200">
+            <div class="con-left">
+            </div>
+            <div class="con-right">
+                <div class="title_b">
+                    <span class="btl">观星标题</span>
+                    <a class="add">+增加</a>
+                </div>
+                <div class="select_part">
+                    <div class="float">
+                        <span class="sp_mz">ID</span>
+                        <input type="text" name="" class="input1 input_cx_id" placeholder="请输入ID">
+                    </div>
+                    <div class="float">
+                        <span class="sp_mz">类型</span>
+                        <input type="text" name="" class="input1 input_cx_lx" placeholder="请输入类型">
+                    </div>
+                    <div class="float">
+                        <span class="sp_mz">名称</span>
+                        <input type="text" name="" class="input1 input_cx_mc" placeholder="请输入名称">
+                    </div>
+                    <div class="poright" id="click_cx">
+                        查询
+                    </div>
+                </div>
+                <div class="table_lct">
+                    <div class="title_list">
+                        <span class="img_sp"></span>
+                        <span class="title_sp">数据列表</span>
+                    </div>
+                    <div class="table_top">
+                        <div class="parts_5">
+                            <div class="part_01">操作符ID</div>
+                            <div class="part_01">操作符名称</div>
+                            <div class="part_01">操作符值</div>
+                            <div class="part_01">状态</div>
+                            <div class="part_01">操作</div>
+                        </div>
+                    </div>
+                    <div class="tablebody">
+                        <div class="infonull">没有数据</div>
+                        <div class="infodata">
+                        </div>
+                    </div>
+                    <div class="pages_lct">
+                        <div class="se_warp">
+                            <span class="spmyxs">每页显示:</span>
+                            <select name="" id="select001">
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                            </select>
+                            <span class="spt">条</span>
+                        </div>
+                        <div class="warp1">
+                            <ul id="myPage"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- main -->
+            <p class="last-p">COPYRIGHT © 2015 特维轮网络科技(杭州)有限公司版权所有 浙ICP备15012731号-2</p>
+            <div class="tipslct">
+            </div>
+        </div>
+    </div>
+    <script src="../public/laypage/laypage.js"></script>
+    <script src="../public/js/Seajs_3.0.0.js"></script>
+    <script>
+    seajs.use('../public/js/operate_lct.js?201607191136');
+    </script>
+</body>
+
+</html>

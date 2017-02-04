@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>分组列表</title>
+    <link rel="stylesheet" href="../public/css/operator_all_list_lct.css">
+</head>
+
+<body>
+    <div class="out_mask">
+        <div class="qdqxbox">
+            <div class="topte1">您确定要删除吗？</div>
+            <div class="qxqxbtn2">
+                <div class="qd1">确定</div>
+                <div class="qx1">取消</div>
+            </div>
+        </div>
+    </div>
+    <div class="tishi"></div>
+    <div class="windowmain">
+        <!-- 头 -->
+        <header>
+            <div class="toppart">
+                <div class="top_inner w1200">
+                    <div class="top_left">
+                        <img src="../public/images/logo.png" alt="">
+                        <span class="sptitle" title="gx">观星数据平台</span>
+                        <a href="" class="fenqun">分群</a>
+                    </div>
+                    <div class="toprightpart po">
+                        <span class="usericon"></span>
+                        <span class="username">厉成韬</span>
+                        <a href="" class="sx" title=""></a>
+                        <a href="" class="tc" title=""></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- 头 -->
+        <!-- main -->
+        <div class="content-main w1200">
+            <div class="con-left">
+            </div>
+            <div class="con-right">
+                <div class="title_list">
+                    <span class="img_sp"></span>
+                    <span class="title_sp">数据列表</span>
+                </div>
+                <div class="select_part">
+                    <div class="float">
+                        <span class="sp_mz">元素ID</span>
+                        <input type="text" name="" class="input1 input_cx_id" placeholder="请输入元素ID">
+                    </div>
+                    <div class="float">
+                        <span class="sp_mz">元素名称</span>
+                        <input type="text" name="" class="input1 input_cx_mxmc" placeholder="请输入元素名称">
+                    </div>
+                    <div class="poright" id="click_cx">
+                        查询
+                    </div>
+                </div>
+                <div class="table_lct">
+                    <div class="table_top">
+                        <div class="parts_5">
+                            <div class="part_01">元素ID</div>
+                            <div class="part_01">行为ID</div>
+                            <div class="part_01">元素名称</div>
+                            <div class="part_01">操作符ID</div>
+                            <div class="part_01">模型ID</div>
+                            <div class="part_01">模型字段</div>
+                            <div class="part_01">数据类型</div>
+                            <div class="part_01">聚合字段</div>
+                            <div class="part_01">分组字段</div>
+                            <div class="part_01">操作</div>
+                        </div>
+                    </div>
+                    <div class="tablebody">
+                        <div class="infonull">没有数据</div>
+                        <div class="infodata">
+                        </div>
+                    </div>
+                    <div class="pages_lct">
+                        <div class="se_warp">
+                            <span class="spmyxs">显示:</span>
+                            <select name="" id="select001">
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                            </select>
+                            <span class="spt">条</span>
+                        </div>
+                        <div class="warp1">
+                            <ul id="myPage"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- main -->
+            <p class="last-p">COPYRIGHT © 2015 特维轮网络科技(杭州)有限公司版权所有 浙ICP备15012731号-2</p>
+            <div class="tipslct">
+            </div>
+        </div>
+    </div>
+    <script src="../public/laypage/laypage.js"></script>
+    <script src="../public/js/Seajs_3.0.0.js"></script>
+    <script>
+    seajs.use('../public/js/operator_all_list_lct.js?201607191136');
+    </script>
+</body>
+
+</html>

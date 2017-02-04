@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>人群属性</title>
+    <link rel="stylesheet" href="../public/css/population_attributes.css">
+</head>
+
+<body>
+    <div class="windowmain">
+        <!-- 头 -->
+        <header>
+            <div class="toppart">
+                <div class="top_inner w1200">
+                    <div class="top_left">
+                        <img src="../public/images/logo.png" alt="">
+                        <span class="sptitle">观星数据平台</span>
+                        <a href="" class="fenqun">分群</a>
+                    </div>
+                    <div class="toprightpart po">
+                        <span class="usericon"></span>
+                        <span class="username">厉成韬</span>
+                        <a href="" class="sx" title=""></a>
+                        <a href="" class="tc" title=""></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- 头 -->
+        <!-- main -->
+        <div class="content-main w1200">
+            <div class="con-left">
+            </div>
+            <div class="con-right">
+                <div class="table_lct">
+                    <div class="title_list">
+                        <span class="img_sp"></span>
+                        <span class="title_sp">数据列表</span>
+                    </div>
+                    <div class="table_top">
+                        <div class="float">属性名称</div>
+                        <div class="float">属性类型</div>
+                        <div class="float">操作符</div>
+                        <div class="float">属性单位</div>
+                        <div class="float">值类型</div>
+                        <div class="float">所属模型</div>
+                        <div class="float">模型字段</div>
+                    </div>
+                    <div class="tablebody">
+                        <div class="tb">
+                            <div class="float">汽车数量</div>
+                            <div class="float">用户信息</div>
+                            <div class="float">大于</div>
+                            <div class="float">辆</div>
+                            <div class="float">数字</div>
+                            <div class="float">用户信息模型</div>
+                            <div class="float">
+                                car_num
+                            </div>
+                        </div>
+                        <div class="tb">
+                            <div class="float">汽车数量</div>
+                            <div class="float">用户信息</div>
+                            <div class="float">大于</div>
+                            <div class="float">辆</div>
+                            <div class="float">数字</div>
+                            <div class="float">用户信息模型</div>
+                            <div class="float">
+                                car_num
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pages_lct">
+                        <ul id="biuuu_city_list"></ul>
+                        <div id="biuuu_city"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main -->
+        <p class="last-p">COPYRIGHT © 2015 特维轮网络科技(杭州)有限公司版权所有 浙ICP备15012731号-2</p>
+    </div>
+    <script src="../public/laypage/laypage.js"></script>
+    <script src="../public/js/Seajs_3.0.0.js"></script>
+    <script>
+    seajs.use('../public/js/population_model_details_lct.js?201607191136');
+    </script>
+</body>
+
+</html>

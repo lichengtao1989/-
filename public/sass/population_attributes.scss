@@ -1,0 +1,282 @@
+@import "compass/css3";
+@import "var";
+html,
+body {
+    @include fo(14px);
+    @include ba(#F4F6F9);
+}
+
+$basewidth:1200px;
+.windowmain {
+    @include ov;
+}
+
+.w1200 {
+    width: $basewidth;
+    @include pr;
+}
+
+.toppart {
+    @include co(#fff);
+    width: 100%;
+    height: 80px;
+    @include ba(#2B9CFF);
+    @include ov;
+    .top_inner {
+        @include mag();
+    }
+    .top_left {
+        @include li(80px);
+        padding-left: 50px;
+        @include fo(16px);
+        img {
+            vertical-align: -10px;
+        }
+        .fenqun {
+            margin-left: 30px;
+            @include co(#fff);
+            @include inline-block;
+            padding: 2px 15px;
+            border: 1px solid #fff;
+            line-height: 20px;
+            @include border-radius(15px);
+        }
+    }
+    .po {
+        @include po;
+        top: 20px;
+        right: 50px;
+    }
+    .usericon {
+        @include inline-block;
+        @include wh(25px, 25px);
+        background: url('../images/user.png');
+        background-size: 100% 100%;
+        margin-left: 20px;
+    }
+    .sx {
+        @include inline-block;
+        @include wh(25px,
+        25px);
+        background: url('../images/refresh.png');
+        background-size: 100% 100%;
+        margin-left: 20px;
+    }
+    .tc {
+        @include inline-block;
+        @include wh(32px,
+        32px);
+        background: url('../images/quit.png');
+        background-size: 100% 100%;
+        margin-left: 30px;
+    }
+    .username {
+        @include inline-block;
+        vertical-align: 7px;
+        @include fo(16px);
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+}
+
+.content-main {
+    min-height: 600px;
+    @include mag();
+    @include pr;
+    @include ov;
+    margin-top: 25px;
+    @include co(#333);
+    @include fo(16px);
+    width: 1000px;
+    padding-left: 200px;
+    .con-left {
+        @include ba(#fff);
+        width: 200px;
+        @include po;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        border: 1px solid #ddd;
+        @include border-radius(7px);
+        padding-bottom: 50px;
+        line-height: 1.5;
+        padding-top: 20px;
+        a {
+            @include co(#333);
+            border-bottom: 1px solid #ddd;
+            @include block;
+            @include wh(100%,
+            40px);
+            line-height: 2.5;
+        }
+    }
+    .part1,
+    .part2 {
+        @include te;
+    }
+    .con-right {
+        padding-left: 20px;
+        width: 880px;
+        .title_b {
+            .btl {
+                margin-left: 15px;
+            }
+            @include ba(#fff);
+            border: 1px solid #ddd;
+            @include li(60px);
+            @include pr;
+            @include border-radius(7px);
+            .add {
+                @include po;
+                @include block;
+                @include wh(80px,
+                30px);
+                @include te;
+                @include ba(#2B9CFF);
+                @include co(#fff);
+                top: 10px;
+                right: 10px;
+                line-height: 30px;
+                @include border-radius(7px);
+                z-index: 3;
+            }
+        }
+        .select_part {
+            margin-top: 15px;
+            @include border-radius(7px);
+            @include ov;
+            @include li(50px);
+            @include ba(#fff);
+            padding-top: 15px;
+            @include pr;
+            .poright {
+                cursor: pointer;
+                @include po;
+                @include wh(70px,
+                30px);
+                @include te;
+                line-height: 30px;
+                @include fo(14px);
+                z-index: 3;
+                top: 15px;
+                right: 15px;
+                @include ba(#2B9CFF);
+                @include co(#fff);
+                @include border-radius(7px);
+            }
+            .float {
+                @include fo(14px);
+                @include float;
+                @include pr;
+                @include wh(165px,
+                30px);
+                border: 1px solid #ddd;
+                line-height: 30px;
+                @include ov;
+                margin-left: 15px;
+                input {
+                    padding-left: 60px;
+                    @include block;
+                    border: none;
+                    @include block;
+                    @include ba(#fff);
+                    outline: none;
+                    @include li(30px);
+                }
+                .sp_mz {
+                    @include po;
+                    top: 0.5px;
+                    left: 0;
+                    width: 50px;
+                    @include te;
+                    z-index: 2;
+                    @include ba(#eee);
+                }
+            }
+        }
+    }
+}
+/*table_lct*/
+.table_lct {
+    @include ba(#fff);
+    @include fo(14px);
+   
+    @include ov;
+    .title_list {
+        border-bottom: 1px solid #ddd;
+        padding: 5px 14px;
+    }
+    .img_sp {
+        @include inline-block;
+        @include wh(35px,
+        35px);
+        background: url('../images/listbg.png') no-repeat;
+        background-size: 100% 100%;
+    }
+    .title_sp {
+        vertical-align: 14px;
+    }
+    .table_top {
+        @include ov;
+        @include li(35px);
+        @include te;
+        @include ba(#eee);
+    }
+    .float {
+        @include float;
+        width: 120px;
+        border-right: 1px solid #ddd;
+    }
+    .float:last-child {
+        border-right: none;
+    }
+}
+.table_lct{
+	@include border-radius(7px);
+	padding-bottom:25px;
+}
+
+.tablebody {
+	
+    @include ov;
+    .tb {
+    	cursor: pointer;
+        @include ov;
+        border-bottom:1px solid #ddd;
+        .float {
+            @include float;
+            @include fo(14px);
+            @include te;
+            @include li(30px);
+			@include ov;
+			text-overflow:ellipsis; 
+            .ljt{
+            	@include wh(25px,25px);
+            	background:url('../images/ljt.png') no-repeat;
+            	background-size:100% 100%;
+            	@include mag();
+            	cursor: pointer;
+            	margin-top:2px;
+            }
+        }
+
+    }
+    .tb:hover{
+        	@include ba(#d4e7f1);
+        }
+}
+/*table_lct*/
+.pages_lct{
+	margin-top:35px;
+	padding-left:50px;
+	#biuuu_city_list{
+		@include none;
+	}
+}
+
+.last-p{
+	@include te;
+	@include li(60px);
+	@include fo(14px);
+	font-weight:lighter;
+}

@@ -1,0 +1,218 @@
+/*reset*/
+$baseSize:75;
+html{
+    color: #000;
+    background: #fff;
+    width:100%;
+    height:100%;
+}
+body{color:#666;font-family: "Microsoft YaHei", sans-serif;line-height:1;-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+    font-style: normal;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: couriernew, courier, monospace;
+}
+
+small {
+    font-size: 12px;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+a:active{text-decoration: none;}
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+legend {
+    color: #000;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input{font-family:"Microsoft YaHei";}
+
+/*reset*/
+.clear{clear:both;overflow:hidden;}
+@mixin fo($size) {
+    font-size: $size;
+}
+
+@mixin wh($wi, $he) {
+    width: $wi;
+    height: $he;
+}
+
+@mixin ba($color) {
+    background: $color
+}
+
+@mixin float($left:left) {
+    float: $left
+}
+
+@mixin te($align:center) {
+    text-align: $align
+}
+
+@mixin co($color) {
+    color: $color
+}
+
+@mixin wi($width) {
+    width: $width
+}
+
+@mixin he($height) {
+    height: $height
+}
+
+@mixin li($lineheight) {
+    line-height: $lineheight;
+    height: $lineheight
+}
+
+@mixin po($position:absolute) {
+    position: $position;
+}
+
+@mixin pr($position:relative) {
+    position: $position;
+}
+
+@mixin mag() {
+    margin: 0 auto;
+}
+
+@mixin ov() {
+    overflow: hidden;
+}
+@mixin cur(){
+    cursor: pointer;
+}
+@mixin inline(){
+display:inline-block;
+}
+@mixin inline-block(){
+display:inline-block;
+}
+@mixin block(){
+    display: block;
+}
+@mixin none(){
+    display: none;
+}
+@mixin baimg($src){
+    background:url($src);
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}
+@mixin p_center(){
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+}
+@mixin wi($val){
+    width:$val/$baseSize;
+}
+@mixin he($val){
+    height:$val/$baseSize;
+}
+@mixin font($val){
+    font-size:$val/$baseSize;
+}
+select {
+  border: solid 1px #000;
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+  padding-right: 14px;
+}
+select::-ms-expand { display: none; }

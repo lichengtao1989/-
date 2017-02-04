@@ -1,0 +1,652 @@
+@import "compass/css3";
+@import "var";
+@import "select";
+html,
+body {
+    @include fo(14px);
+    @include ba(#F4F6F9);
+}
+
+$basewidth:1200px;
+.windowmain {
+    @include ov;
+}
+
+.w1200 {
+    width: $basewidth;
+    @include pr;
+}
+
+.toppart {
+    @include co(#fff);
+    width: 100%;
+    height: 80px;
+    @include ba(#2B9CFF);
+    @include ov;
+    .top_inner {
+        @include mag();
+    }
+    .top_left {
+        @include li(80px);
+        padding-left: 50px;
+        @include fo(16px);
+        img {
+            vertical-align: -10px;
+        }
+        .fenqun {
+            margin-left: 30px;
+            @include co(#fff);
+            @include inline-block;
+            padding: 2px 15px;
+            border: 1px solid #fff;
+            line-height: 20px;
+            @include border-radius(15px);
+        }
+    }
+    .po {
+        @include po;
+        top: 20px;
+        right: 50px;
+    }
+    .usericon {
+        @include inline-block;
+        @include wh(25px,
+        25px);
+        background: url('../images/user.png');
+        background-size: 100% 100%;
+        margin-left: 20px;
+    }
+    .sx {
+        @include inline-block;
+        @include wh(25px,
+        25px);
+        background: url('../images/refresh.png');
+        background-size: 100% 100%;
+        margin-left: 20px;
+    }
+    .tc {
+        @include inline-block;
+        @include wh(32px,
+        32px);
+        background: url('../images/quit.png');
+        background-size: 100% 100%;
+        margin-left: 30px;
+    }
+    .username {
+        @include inline-block;
+        vertical-align: 7px;
+        @include fo(16px);
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+}
+
+.content-main {
+    min-height: 600px;
+    @include mag();
+    @include pr;
+    @include ov;
+    margin-top: 25px;
+    @include co(#333);
+    @include fo(16px);
+    width: 1000px;
+    padding-left: 200px;
+    .con-left {
+        
+        @include ba(#fff);
+        width: 200px;
+        @include po;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        border: 1px solid #ddd;
+        @include border-radius(7px);
+        padding-bottom: 50px;
+        line-height: 1.5;
+        padding-top: 20px;
+        a {
+            @include co(#333);
+            border-bottom: 1px solid #ddd;
+            @include block;
+            @include wh(100%,
+           40px);
+            line-height:40px;
+        }
+    }
+    .part1,
+    .part2 {
+        @include te;
+    }
+    .con-right {
+        padding-left: 20px;
+        width: 880px;
+        .title_b {
+            .btl {
+                margin-left: 15px;
+            }
+            @include ba(#fff);
+            border: 1px solid #ddd;
+            @include li(60px);
+            @include pr;
+            @include border-radius(7px);
+            .add {
+                cursor: pointer;
+                @include po;
+                @include block;
+                @include wh(80px,
+                30px);
+                @include te;
+                @include ba(#2B9CFF);
+                @include co(#fff);
+                top: 10px;
+                right: 10px;
+                line-height: 30px;
+                @include border-radius(7px);
+                z-index: 3;
+            }
+        }
+        .select_part {
+            margin-top: 15px;
+            @include border-radius(7px);
+            @include ov;
+            @include li(50px);
+            @include ba(#fff);
+            padding-top: 15px;
+            @include pr;
+            .poright {
+                cursor: pointer;
+                @include float;
+                margin-left: 25px;
+                @include wh(70px,
+                30px);
+                @include te;
+                line-height: 30px;
+                @include fo(14px);
+                //  @include po;
+                // z-index: 3;
+                // top: 15px;
+                // left: 420px;
+                @include ba(#2B9CFF);
+                @include co(#fff);
+                @include border-radius(7px);
+            }
+            .float {
+                @include border-radius(5px);
+                @include fo(14px);
+                @include float;
+                @include pr;
+                @include wh(165px,
+                30px);
+                border: 1px solid #ddd;
+                line-height: 30px;
+                @include ov;
+                margin-left: 15px;
+                input {
+                    padding-left: 60px;
+                    @include block;
+                    border: none;
+                    @include block;
+                    @include ba(#fff);
+                    outline: none;
+                    @include li(30px);
+                }
+                .sp_mz {
+                    @include po;
+                    top: 0.5px;
+                    left: 0;
+                    width: 50px;
+                    @include te;
+                    z-index: 2;
+                    @include ba(#eee);
+                }
+            }
+        }
+    }
+}
+
+
+/*table_lct*/
+
+.save_btn {
+
+    @include wh(80px,
+    30px);
+    @include te;
+    line-height: 30px;
+    @include ba(#2B9CFF);
+    @include co(#fff);
+    @include border-radius(8px);
+   @include mag;
+    cursor: pointer;
+}
+
+.table_lct {
+    @include ba(#fff);
+    @include fo(14px);
+    
+    overflow-y: scroll;
+    .title_list {
+        border-bottom: 1px solid #ddd;
+        padding: 5px 14px;
+        @include pr;
+    }
+    .img_sp {
+        @include inline-block;
+        @include wh(35px,
+        35px);
+        background: url('../images/listbg.png') no-repeat;
+        background-size: 100% 100%;
+    }
+    .title_sp {
+        vertical-align: 14px;
+    }
+    .table_top {
+        @include ov;
+        @include li(35px);
+        @include te;
+        @include ba(#eee);
+    }
+    .float {
+        @include float;
+        width: 96px;
+        border-right: 1px solid #ddd;
+    }
+    .float:last-child {
+        border-right: none;
+    }
+}
+
+
+.nextinfo,
+.tablebody {
+    @include pr;
+    min-height: 34px;
+    padding-top:15px;
+    .part_01 {
+        @include pr;
+        @include fo(12px);
+    }
+    .ysmc {
+        @include block;
+       
+   
+        margin: 0 auto;
+        outline: none;
+        margin-top: 5px;
+        @include border-radius(5px);
+        border: 1px solid #ddd;
+        @include fo(12px);
+    }
+    .ysgsxwmc_se {
+        @include block;
+      
+    }
+}
+
+.table_lct {
+    @include border-radius(7px);
+   
+    padding-bottom: 60px;
+    .parts_5 {
+        border-bottom: 1px solid #ddd;
+        @include ov;
+        .part_01 {
+            @include float;
+            width: 108.5px;
+            border-right: 1px solid #ddd;
+            @include te;
+            @include fo(12px);
+        }
+        .part_01:last-child {
+            border-right: none;
+        }
+    }
+    .tablebody {
+        .parts_5 {
+            cursor: pointer;
+            .ov {
+                @include ov;
+                text-overflow: ellipsis;
+            }
+            .part_01 {
+                @include li(30px);
+                text-overflow: ellipsis;
+            }
+            .czp {
+                @include wh(25px,
+                25px);
+                background: url('../images/qb.png') no-repeat;
+                background-size: 100% 100%;
+                @include mag();
+                z-index: 3;
+                margin-top: 2px;
+            }
+        }
+        .parts_5:hover {
+            @include ba(#d4e7f1);
+        }
+    }
+}
+
+
+/*table_lct*/
+
+.pages_lct {
+    margin-top: 35px;
+    @include ov;
+    .se_warp,
+    .warp1 {
+        @include float;
+        margin-right: 15px;
+        margin-left: 20px;
+    }
+    #select001 {
+        @include inline-block;
+        @include wh(40px,
+        20px);
+        @include border-radius(5px);
+        border: 1px solid #ddd;
+        outline: none;
+    }
+}
+
+.last-p {
+    @include te;
+    @include li(60px);
+    @include fo(14px);
+    font-weight: lighter;
+}
+
+
+/*jiantou*/
+
+.jtxs {
+    background: url('../images/select2.png') no-repeat;
+    background-position: 200px 8px;
+    background-size: 15px 15px;
+}
+
+.jtxx {
+    background: url('../images/select.png') no-repeat;
+    background-position: 200px 8px;
+    background-size: 15px 15px;
+}
+
+
+/*jiantou*/
+
+//table
+.infonull {
+    @include none;
+    @include te;
+    @include li(35px);
+    border-bottom: 1px solid #ddd;
+}
+
+.operationListP {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+//table
+.info3 {
+    @include pr;
+    padding-left: 105px;
+    @include te;
+    .info_left3 {
+        @include po;
+        top: 20px;
+        left: 0px;
+        width: 105px;
+    }
+    .ajaxaparyd {
+        @include ov;
+        padding-top: 15px;
+        input {
+            @include block;
+            @include float;
+            border: 1px solid #ddd;
+            @include fo(12px);
+            margin-right: 5px;
+            width: 70px;
+            @include li(25px);
+            @include border-radius(5px);
+            outline: none;
+        }
+    }
+    .addlist {
+        padding-top: 12px;
+        @include ov;
+        input {
+            @include block;
+            @include float;
+            border: 1px solid #ddd;
+            @include fo(12px);
+            margin-right: 5px;
+            width: 70px;
+            @include li(25px);
+            @include border-radius(5px);
+            outline: none;
+        }
+        .ys2 {
+            @include float;
+            @include block;
+            @include fo(12px);
+            width: 70px;
+            @include li(25px);
+            @include border-radius(5px);
+            cursor: pointer;
+            border: 1px solid #ddd;
+        }
+    }
+}
+
+
+
+.btn_qd,
+.btn_qx,
+.btn_qd2 {
+    @include float;
+    @include wh(70px,
+    30px);
+    line-height: 30px;
+    cursor: pointer;
+    @include border-radius(6px);
+    @include te;
+    margin-top: 15px;
+    @include fo(13px);
+}
+
+.btn_qd {
+    @include ba(#2B9CFF);
+    @include co(#fff);
+    margin-left: 90px;
+    margin-right: 20px;
+}
+
+.btn_qx {
+    @include ba(#ddd);
+    @include co(#666);
+}
+
+.tishi {
+    position: fixed;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.65);
+    @include co(#fff);
+    @include te;
+    @include p_center;
+    @include border-radius(8px);
+    padding: 15px 25px 10px 25px;
+    @include none;
+    min-width: 120px;
+    min-height: 20px;
+}
+
+.tipslct {
+    position: fixed;
+    z-index: 10;
+    border: 1px solid #ddd;
+    padding: 8px 20px;
+    display: none;
+    background: #83f5c6;
+    @include co(#000);
+    @include border-radius(8px);
+    @include fo(12px);
+}
+
+.btn_qd2 {
+    @include float;
+    @include wh(70px,
+    30px);
+    line-height: 30px;
+    cursor: pointer;
+    @include border-radius(6px);
+    @include te;
+    margin-top: 15px;
+    @include fo(13px);
+    @include ba(#2B9CFF);
+    @include co(#fff);
+    margin-left: 90px;
+    margin-right: 20px;
+}
+
+.floatse,
+.sp_zt {
+    @include float();
+    @include block;
+}
+
+.sp_zt {
+    width: 50px;
+    @include te;
+    z-index: 2;
+    @include ba(#eee);
+}
+
+.floatse {
+    @include wh(60px,
+    25px);
+    outline: none;
+    border: 1px solid #ddd;
+    margin-top: 2px;
+    margin-left: 6px;
+    @include border-radius(3px);
+    cursor: pointer;
+    border: none;
+}
+
+.radio22 {
+    margin-left: 25px;
+}
+
+.jtdt {
+    @include none;
+}
+
+.mxb {
+    @include none;
+}
+
+.djxzmxzd,
+.djxzmxzd2,
+.djxzmxzd3 {
+    @include none;
+    @include pr;
+    cursor: pointer;
+}
+
+.pobox,
+.pobox2,
+.pobox3 {
+    @include none;
+    z-index: 2;
+    @include po;
+    top: -80px;
+    left: 120px;
+    border: 1px solid #ddd;
+    width: 326px;
+    @include ba(#fff);
+    .top,
+    .options {
+        @include ov;
+        border-bottom: 1px solid #ddd;
+    }
+    .mz1,
+    .opl,
+    .opr {
+        @include float;
+        width: 49%;
+        @include te;
+        @include li(26px);
+    }
+    .bl {
+        border-right: 1px solid #ddd;
+    }
+}
+
+.info_warp2 {
+    @include pr;
+}
+
+.pobox2,
+.pobox3 {
+    
+    @include te;
+}
+
+.jhzdop,
+.mzdd {
+    @include li(34px);
+    border-bottom: 1px solid #ddd;
+    @include te;
+}
+
+.jhzdop2 {
+    border-bottom: 1px solid #ddd;
+    @include li(34px);
+    @include te;
+}
+
+.mzdd2 {
+    border-bottom: 1px solid #ddd;
+    @include li(34px);
+    @include te;
+}
+
+.mcl,
+.part_01 {
+    @include inline-block;
+}
+
+.mcl {
+    width: 380px;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.info_warp {
+    @include pr;
+    min-height: 48px;
+}
+
+
+
+.pobox3 {
+    left: 535px;
+}
+.warp_01{
+    @include none;
+}.warp_02{
+    @include none;
+}
+.errorts1{
+    border:1px solid red !important;
+}
+.pobox2 {
+    left: 535px;
+    width:180px;
+}
+.pobox3{
+width:180px;
+}

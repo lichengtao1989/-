@@ -1,0 +1,719 @@
+@import "compass/css3";
+@import "var";
+html,
+body {
+    @include fo(14px);
+    @include ba(#F4F6F9);
+}
+
+$basewidth:1200px;
+.windowmain {
+    @include ov;
+}
+
+.w1200 {
+    width: $basewidth;
+    @include pr;
+}
+
+.toppart {
+    @include co(#fff);
+    width: 100%;
+    height: 80px;
+    @include ba(#2B9CFF);
+    @include ov;
+    .top_inner {
+        @include mag();
+    }
+    .top_left {
+        @include li(80px);
+        padding-left: 50px;
+        @include fo(16px);
+        img {
+            vertical-align: -10px;
+        }
+        .fenqun {
+            margin-left: 30px;
+            @include co(#fff);
+            @include inline-block;
+            padding: 2px 15px;
+            border: 1px solid #fff;
+            line-height: 20px;
+            @include border-radius(15px);
+        }
+    }
+    .po {
+        @include po;
+        top: 20px;
+        right: 50px;
+    }
+    .usericon {
+        @include inline-block;
+        @include wh(25px, 25px);
+        background: url('../images/user.png');
+        background-size: 100% 100%;
+        margin-left: 20px;
+    }
+    .sx {
+        @include inline-block;
+        @include wh(25px,
+        25px);
+        background: url('../images/refresh.png');
+        background-size: 100% 100%;
+        margin-left: 20px;
+    }
+    .tc {
+        @include inline-block;
+        @include wh(32px,
+        32px);
+        background: url('../images/quit.png');
+        background-size: 100% 100%;
+        margin-left: 30px;
+    }
+    .username {
+        @include inline-block;
+        vertical-align: 7px;
+        @include fo(16px);
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+}
+
+.content-main {
+    min-height: 600px;
+    @include mag();
+    @include pr;
+    @include ov;
+    margin-top: 25px;
+    @include co(#333);
+    @include fo(16px);
+    width: 1000px;
+    padding-left: 200px;
+    .con-left {
+        @include ba(#fff);
+        width: 200px;
+        @include po;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        border: 1px solid #ddd;
+        @include border-radius(7px);
+        padding-bottom: 50px;
+        line-height: 1.5;
+        padding-top: 20px;
+        a {
+            @include co(#333);
+            border-bottom: 1px solid #ddd;
+            @include block;
+            @include wh(100%,
+            40px);
+            line-height: 2.5;
+        }
+    }
+    .part1,
+    .part2 {
+        @include te;
+    }
+    .con-right {
+        padding-left: 20px;
+        width: 880px;
+        .title_b {
+            .btl {
+                margin-left: 15px;
+            }
+            @include ba(#fff);
+            border: 1px solid #ddd;
+            @include li(60px);
+            @include pr;
+            @include border-radius(7px);
+            .add {
+                cursor: pointer;
+                @include po;
+                @include block;
+                @include wh(80px,
+                30px);
+                @include te;
+                @include ba(#2B9CFF);
+                @include co(#fff);
+                top: 10px;
+                right: 10px;
+                line-height: 30px;
+                @include border-radius(7px);
+                z-index: 3;
+            }
+        }
+        .select_part {
+            margin-top: 15px;
+            @include border-radius(7px);
+            @include ov;
+            @include li(50px);
+            @include ba(#fff);
+            padding-top: 15px;
+            @include pr;
+            .poright {
+                cursor: pointer;
+                @include float;
+                margin-left: 25px;
+                @include wh(70px,
+                30px);
+                @include te;
+                line-height: 30px;
+                @include fo(14px);
+                //  @include po;
+                // z-index: 3;
+                // top: 15px;
+                // left: 420px;
+                @include ba(#2B9CFF);
+                @include co(#fff);
+                @include border-radius(7px);
+            }
+            .float {
+                @include border-radius(5px);
+                @include fo(14px);
+                @include float;
+                @include pr;
+                @include wh(165px,
+                30px);
+                border: 1px solid #ddd;
+                line-height: 30px;
+                @include ov;
+                margin-left: 15px;
+                input {
+                    padding-left: 60px;
+                    @include block;
+                    border: none;
+                    @include block;
+                    @include ba(#fff);
+                    outline: none;
+                    @include li(30px);
+                     @include fo(12px);
+                }
+                .sp_mz {
+                    @include po;
+                    top: 0.5px;
+                    left: 0;
+                    width: 50px;
+                    @include te;
+                    z-index: 2;
+                    @include ba(#eee);
+                }
+            }
+        }
+    }
+}
+
+
+/*table_lct*/
+
+.table_lct {
+    @include ba(#fff);
+    @include fo(14px);
+    margin-top: 15px;
+    @include ov;
+    .title_list {
+        border-bottom: 1px solid #ddd;
+        padding: 5px 14px;
+    }
+    .img_sp {
+        @include inline-block;
+        @include wh(35px,
+        35px);
+        background: url('../images/listbg.png') no-repeat;
+        background-size: 100% 100%;
+    }
+    .title_sp {
+        vertical-align: 14px;
+    }
+    .table_top {
+        @include ov;
+        @include li(35px);
+        @include te;
+        @include ba(#eee);
+    }
+    .float {
+        @include float;
+        width: 96px;
+        border-right: 1px solid #ddd;
+    }
+    .float:last-child {
+        border-right: none;
+    }
+}
+
+.table_lct {
+    @include border-radius(7px);
+    padding-bottom: 25px;
+}
+
+.table_lct {
+    @include ov;
+    .parts_5 {
+        border-bottom: 1px solid #ddd;
+        @include ov;
+        .part_01 {
+            @include float;
+            width: 175px;
+            border-right: 1px solid #ddd;
+            @include te;
+        }
+        .part_01:last-child {
+            border-right: none;
+        }
+    }
+    .tablebody {
+        .parts_5 {
+            cursor: pointer;
+            .part_01 {
+                @include li(30px);
+                text-overflow: ellipsis;
+            }
+            .czp {
+                @include wh(25px,
+                25px);
+                background: url('../images/qb.png') no-repeat;
+                background-size: 100% 100%;
+                @include mag();
+                z-index: 3;
+                margin-top: 2px;
+            }
+        }
+        .parts_5:hover {
+            @include ba(#d4e7f1);
+        }
+    }
+}
+
+
+/*table_lct*/
+
+.pages_lct {
+    margin-top: 35px;
+    @include ov;
+    .se_warp,
+    .warp1 {
+        @include float;
+        margin-right: 15px;
+        margin-left: 20px;
+    }
+    #select001 {
+        @include inline-block;
+        @include wh(40px,
+        20px);
+        @include border-radius(5px);
+        border: 1px solid #ddd;
+        outline: none;
+    }
+}
+
+.last-p {
+    @include te;
+    @include li(60px);
+    @include fo(14px);
+    font-weight: lighter;
+}
+
+
+/*jiantou*/
+
+.jtxs {
+    background: url('../images/select2.png') no-repeat;
+    background-position: 200px 8px;
+    background-size: 15px 15px;
+}
+
+.jtxx {
+    background: url('../images/select.png') no-repeat;
+    background-position: 200px 8px;
+    background-size: 15px 15px;
+}
+
+
+/*jiantou*/
+
+//table
+.infonull {
+    @include none;
+    @include te;
+    @include li(35px);
+    border-bottom: 1px solid #ddd;
+}
+
+.operationListP {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+//table
+.info3 {
+    @include pr;
+    padding-left: 105px;
+    @include te;
+    .info_left3 {
+        @include po;
+        top: 20px;
+        left: 0px;
+        width: 105px;
+    }
+    .ajaxaparyd {
+        @include ov;
+        padding-top: 15px;
+        input {
+            @include block;
+            @include float;
+            border: 1px solid #ddd;
+            @include fo(12px);
+            margin-right: 5px;
+            width: 70px;
+            @include li(25px);
+            @include border-radius(5px);
+            outline: none;
+        }
+    }
+    .addlist {
+        padding-top: 12px;
+        @include ov;
+        input {
+            @include block;
+            @include float;
+            border: 1px solid #ddd;
+            @include fo(12px);
+            margin-right: 5px;
+            width: 70px;
+            @include li(25px);
+            @include border-radius(5px);
+            outline: none;
+        }
+        .ys2 {
+            @include float;
+            @include block;
+            @include fo(12px);
+            width: 70px;
+            @include li(25px);
+            @include border-radius(5px);
+            cursor: pointer;
+            border: 1px solid #ddd;
+        }
+    }
+}
+
+
+/*fixed popup*/
+
+.out_mask {
+    @include none;
+    width: 100%;
+    height: 100%;
+    @include po;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background: rgba(0, 0, 0, 0.35);
+    //fixed_popup2
+    .fixed_popup2 {
+        @include none;
+        width: 350px;
+        min-height: 250px;
+        padding-bottom: 20px;
+        position: fixed;
+        z-index: 5;
+        border: 1px solid #ddd;
+        @include p_center();
+        @include border-radius(8px);
+        @include ba(#fff);
+        @include ov;
+        top: 35%;
+        .statusout {
+            @include ov;
+            padding-top: 8px;
+            .infoi_left,
+            .infoi_right {
+                @include float;
+            }
+            .infoi_left {
+                width: 32%;
+                @include te;
+            }
+            .infoi_right {
+                input[type="radio"] {
+                    cursor: pointer;
+                    margin-left: 15px;
+                    vertical-align: -2px;
+                }
+            }
+        }
+        .btn_p_2 {
+            @include ov;
+            height: 50px;
+        }
+        .xzxs {
+            @include fo(12px);
+            @include li(30px);
+            border: 1px solid #ddd;
+            @include border-radius(6px);
+            width: 325px;
+            @include mag;
+            margin-bottom: 20px;
+            margin-top: 15px;
+            @include none;
+        }
+        .ovpart {
+            @include pr;
+            width: 100%;
+            margin-top: 15px;
+            padding-left: 113px;
+            .addlist {
+                padding-bottom: 6px;
+                @include ov;
+                .block {
+                    @include block;
+                    @include float;
+                    border: 1px solid #ddd;
+                    @include fo(12px);
+                    margin-right: 5px;
+                }
+                input {
+                    @include li(25px);
+                    width: 48px;
+                    outline: none;
+                    padding-left: 12px;
+                    @include border-radius(5px);
+                }
+                .ys {
+                    width: 70px;
+                    @include li(25px);
+                    @include border-radius(5px);
+                    cursor: pointer;
+                }
+            }
+            .czflist {
+                width: 225px;
+                @include ov;
+                @include none;
+            }
+            .po011 {
+                width: 145px;
+                @include te;
+                @include po;
+                top: 0;
+                left: -10px;
+                @include li(25px);
+            }
+            .po012 {
+                width: 225px;
+                @include te;
+                .tjczf {
+                    @include wh(100%,
+                    25px);
+                    line-height: 25px;
+                    @include te;
+                    border: 1px solid #ddd;
+                    @include border-radius(6px);
+                }
+                .psepart {
+                    @include li(28px);
+                    width: 225px;
+                    border: 1px solid #ddd;
+                    @include border-radius(6px);
+                }
+            }
+            .cz_add {
+                @include wh(12px,
+                12px);
+                @include baimg('../images/add1.png');
+                @include mag;
+                margin-top: 2px;
+            }
+            .topsm {
+                border-top: 1px solid #ddd;
+            }
+            .topsm,
+            .ilistp {
+                @include ov;
+                width: 280px;
+                .float:first-child {
+                    border-left: 1px solid #ddd;
+                }
+                .float:last-child {
+                    cursor: pointer;
+                }
+            }
+            .float {
+                @include float;
+                width: 74px;
+                border-right: 1px solid #ddd;
+                border-bottom: 1px solid #ddd;
+                @include li(17px);
+            }
+            .hiddenpart {
+                @include none;
+            }
+        }
+        .closex2 {
+            @include po;
+            top: 5px;
+            right: 10px;
+            z-index: 6;
+            background: url('../images/close01.png') no-repeat;
+            background-size: 100% 100%;
+            @include wh(20px,
+            20px);
+            cursor: pointer;
+        }
+        .title_pop2 {
+            @include li(35px);
+            padding: 0 15px;
+            @include ba(#f5f3f3);
+            border-bottom: 1px solid #ddd;
+        }
+        .info_list {
+            @include ov;
+            .infoi {
+                @include pr;
+                padding-bottom: 5px;
+                margin-top: 12px;
+                @include ov;
+                input[type="text"] {
+                    @include block;
+                    border: 1px solid #ddd;
+                    @include li(28px);
+                    width: 210px;
+                    @include border-radius(5px);
+                    padding-left: 15px;
+                    outline: none;
+                    @include fo(14px);
+                }
+                .infoi_left,
+                .infoi_right {
+                    @include float;
+                }
+                .infoi_left {
+                    padding-top: 6px;
+                    width: 32%;
+                    @include te;
+                }
+            }
+        }
+    }
+    //fixed_popup2
+    .fixed_popup {
+        @include none;
+        width: 350px;
+        padding-bottom: 80px;
+        position: fixed;
+        z-index: 5;
+        border: 1px solid #ddd;
+        @include p_center();
+        @include border-radius(8px);
+        @include ba(#fff);
+        @include ov;
+        .closex {
+            @include po;
+            top: 5px;
+            right: 10px;
+            z-index: 6;
+            background: url('../images/close01.png') no-repeat;
+            background-size: 100% 100%;
+            @include wh(20px,
+            20px);
+            cursor: pointer;
+        }
+        .top_title {
+            @include li(35px);
+            padding: 0 15px;
+            @include ba(#f5f3f3);
+            border-bottom: 1px solid #ddd;
+        }
+        .info {
+            @include ov;
+            @include li(30px);
+            margin-top: 10px;
+            input[type="text"] {
+                @include block;
+                border: 1px solid #ddd;
+                @include li(28px);
+                width: 215px;
+                @include border-radius(5px);
+                padding-left: 15px;
+                outline: none;
+            }
+            input[type="radio"] {
+                margin-right: 6px;
+                vertical-align: -1px;
+            }
+            .info_left,
+            .info_right {
+                @include float;
+            }
+            .info_left {
+                width: 30%;
+                @include te;
+            }
+            .info_right3 {
+                padding-left: 20px;
+            }
+        }
+        .bottom_btn2 {
+            @include po;
+            bottom: 0;
+            left: 0;
+            height: 65px;
+            width: 100%;
+            border-top: 1px solid #ddd;
+            @include ov;
+        }
+    }
+}
+
+
+/*fixed popup*/
+
+.btn_qd,
+.btn_qx {
+    @include float;
+    @include wh(70px,
+    30px);
+    line-height: 30px;
+    cursor: pointer;
+    @include border-radius(6px);
+    @include te;
+    margin-top: 15px;
+    @include fo(13px);
+}
+
+.btn_qd {
+    @include ba(#2B9CFF);
+    @include co(#fff);
+    margin-left: 90px;
+    margin-right: 20px;
+}
+
+.btn_qx {
+    @include ba(#ddd);
+    @include co(#666);
+}
+
+.tishi {
+    position: fixed;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.65);
+    @include co(#fff);
+    @include te;
+    @include p_center;
+    @include border-radius(8px);
+    padding: 15px 25px 10px 25px;
+    @include none;
+    min-width: 120px;
+    min-height: 20px;
+}
+
+.tipslct {
+    position: fixed;
+    z-index: 10;
+    border: 1px solid #ddd;
+    padding: 8px 20px;
+    display: none;
+    background: #83f5c6;
+    @include co(#000);
+    @include border-radius(8px);
+    @include fo(12px);
+}

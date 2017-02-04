@@ -1,0 +1,76 @@
+select {
+    border: solid 1px #000;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 14px;
+    background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+}
+
+select option[selected] {
+    font-weight: bold
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+input,
+select {
+    padding-left: 14px;
+    box-sizing: border-box;
+    @include block;
+    width: 270px;
+    @include li(28px);
+    outline: none;
+    border: 1px solid #ddd;
+    @include border-radius(6px);
+}
+
+
+/* SELECT W/IMAGE */
+
+select {
+ 
+    padding: 0 0px 0 14px;
+    vertical-align: middle;
+    border: 1px solid #e9e9e9;
+    -moz-border-radius: 0.2em;
+    -webkit-border-radius: 0.2em;
+    border-radius: 0.2em;
+ 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* sample image from the webinfocentral.com */
+    // background: url(http://webinfocentral.com/Images/favicon.ico) 95% / 10% no-repeat #fdfdfd;
+    font-family: "Microsoft YaHei";
+  
+    color: #999;
+    cursor: pointer;
+}
+
+select option {
+    font-size: 1em;
+    padding: 0.2em 0.4em 0.2em 0.4em;
+}
+
+select option[selected] {
+    font-weight: bold
+}
+
+select option:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+select:hover {
+    color: #101010;
+
+}
+
+select:focus {
+    box-shadow: 0 0 2px 1px #404040;
+}
+
+
+/*SELECT W/DOWN-ARROW*/
